@@ -1,0 +1,519 @@
+.hero {
+  position: relative;
+
+  min-height: 760px;
+
+  padding: 115px 0 75px;
+
+  overflow: hidden;
+
+  background: var(--ivory);
+}
+
+.hero-container {
+  width: min(1180px, 90%);
+
+  min-height: 570px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+.hero-content {
+  min-width: 0;
+  max-width: 620px;
+}
+
+.hero-eyebrow {
+  margin-bottom: 22px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #718078;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(3.5rem, 6vw, 6rem);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+
+  color: var(--forest);
+
+  overflow-wrap: break-word;
+}
+
+.hero h1 span {
+  display: block;
+
+  color: #708277;
+}
+
+.hero-description {
+  max-width: 540px;
+
+  margin-top: 32px;
+
+  font-size: 1.08rem;
+
+  line-height: 1.8;
+
+  color: #5f625d;
+}
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  margin-top: 38px;
+}
+
+.hero-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  color: var(--forest);
+}
+
+.hero-link span {
+  font-size: 1.2rem;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-link:hover span {
+  transform: translateX(5px);
+}
+
+.hero-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 38px;
+
+  font-size: 0.78rem;
+
+  color: #788078;
+}
+
+.hero-note span {
+  font-size: 0.55rem;
+
+  color: var(--sage);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  min-width: 0;
+
+  justify-self: end;
+}
+
+.hero-image-frame {
+  position: relative;
+
+  width: 100%;
+
+  height: 620px;
+
+  overflow: hidden;
+
+  border-radius: 240px 240px 24px 24px;
+
+  background: var(--sage);
+}
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: saturate(0.88);
+}
+
+.hero-image-caption {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 14px;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 0.95rem;
+
+  color: var(--forest);
+}
+
+.hero-image-caption span {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 0.7rem;
+
+  color: #7d877f;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.hero-bottom-text {
+  position: absolute;
+
+  bottom: 30px;
+  left: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  transform: translateX(-50%);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  color: #7a827c;
+
+  white-space: nowrap;
+}
+
+.scroll-line {
+  display: block;
+
+  width: 50px;
+
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #aeb5af;
+}
+
+/* =========================
+   TABLET
+========================= */
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    min-height: 700px;
+
+    padding: 105px 0 65px;
+  }
+
+  .hero-container {
+    width: min(92%, 900px);
+
+    min-height: 530px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(300px, 0.8fr);
+
+    gap: 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+
+    font-size: 1rem;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+
+    max-width: 380px;
+
+    justify-self: end;
+  }
+
+  .hero-image-frame {
+    height: 500px;
+
+    border-radius:
+      180px
+      180px
+      20px
+      20px;
+  }
+
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .hero-container {
+    width: min(90%, 650px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 55px;
+
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 650px;
+  }
+
+  .hero-image-wrapper {
+    width: min(100%, 420px);
+
+    max-width: 420px;
+
+    margin: 0 auto;
+
+    align-self: center;
+  }
+
+  .hero-image-frame {
+    height: 500px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: auto;
+
+    padding:
+      115px
+      0
+      65px;
+  }
+
+  .hero-container {
+    width: calc(100% - 32px);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 45px;
+
+    min-height: auto;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    max-width: none;
+
+    min-width: 0;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    width: 100%;
+
+    font-size: clamp(2.7rem, 12vw, 3.8rem);
+
+    line-height: 0.98;
+
+    letter-spacing: -1px;
+
+    overflow-wrap: anywhere;
+  }
+
+  .hero-description {
+    width: 100%;
+
+    max-width: none;
+
+    margin-top: 25px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-top: 30px;
+  }
+
+  .hero-note {
+    margin-top: 30px;
+
+    font-size: 0.72rem;
+  }
+
+  .hero-image-wrapper {
+    width: min(100%, 390px);
+
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    align-self: center;
+  }
+
+  .hero-image-frame {
+    width: 100%;
+
+    height: 470px;
+
+    border-radius:
+      180px
+      180px
+      18px
+      18px;
+  }
+
+  .hero-image-caption {
+    font-size: 0.85rem;
+  }
+
+  .hero-bottom-text {
+    display: none;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+  .hero {
+    padding-top: 105px;
+
+    padding-bottom: 55px;
+  }
+
+  .hero-container {
+    width: calc(100% - 28px);
+
+    gap: 38px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 11.5vw, 3.3rem);
+
+    letter-spacing: -0.8px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    margin-top: 25px;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+
+    max-width: 360px;
+  }
+
+  .hero-image-frame {
+    height: 430px;
+
+    border-radius:
+      160px
+      160px
+      16px
+      16px;
+  }
+
+}

@@ -1,0 +1,110 @@
+.approach-page {
+  padding: 140px 0;
+  background: var(--ivory);
+}
+
+.approach-page .container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+.approach-eyebrow {
+  margin-bottom: 20px;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #7c887f;
+}
+
+.approach-page h1 {
+  max-width: 850px;
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -2px;
+
+  color: var(--forest);
+}
+
+.approach-page h1 span {
+  display: block;
+  color: #7b8a81;
+}
+
+.approach-description {
+  max-width: 650px;
+  margin-top: 35px;
+
+  font-size: 1rem;
+  line-height: 1.85;
+
+  color: #6a706b;
+}
+
+.approach-points {
+  margin-top: 80px;
+  border-top: 1px solid #d7d4cc;
+}
+
+.approach-points > div {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  gap: 30px;
+
+  padding: 35px 0;
+
+  border-bottom: 1px solid #d7d4cc;
+}
+
+.approach-points span {
+  font-size: 0.72rem;
+  color: #89918a;
+}
+
+.approach-points h2 {
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+
+  color: var(--forest);
+}
+
+.approach-points p {
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: #6a706b;
+}
+
+@media (max-width: 700px) {
+  .approach-page {
+    padding: 90px 0;
+  }
+
+  .approach-page h1 {
+    font-size: 3.2rem;
+  }
+
+  .approach-points {
+    margin-top: 55px;
+  }
+
+  .approach-points > div {
+    grid-template-columns: 40px 1fr;
+    gap: 15px;
+  }
+
+  .approach-points p {
+    grid-column: 2;
+  }
+}

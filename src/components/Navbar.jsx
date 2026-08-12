@@ -15,28 +15,25 @@ function Navbar() {
           </span>
 
           <span className="brand-tagline">
-            Counselling & Psychological Support
+            Be who you are and say what you feel
           </span>
 
         </Link>
+
 
         {/* Navigation */}
         <nav className="navbar-links">
 
           <Link to="/">Home</Link>
-
           <Link to="/about">About</Link>
-
           <Link to="/services">Services</Link>
-
           <Link to="/approach">Approach</Link>
-
           <Link to="/faq">FAQs</Link>
-
 
         </nav>
 
-        {/* CTA */}
+
+        {/* Booking Button */}
         <Link
           to="/booking"
           className="navbar-button"

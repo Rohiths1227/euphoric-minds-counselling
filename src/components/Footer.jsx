@@ -1,43 +1,64 @@
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className="footer">
 
       <div className="footer-container">
 
         {/* Brand */}
         <div className="footer-brand">
 
-          <h2>Euphoric Minds</h2>
+          <h2>
+            Euphoric Minds
+          </h2>
 
           <p className="footer-tagline">
-            Counselling & Psychological Support
+            Be who you are and say what you feel
           </p>
 
           <p className="footer-description">
             A safe and confidential space to understand,
+            <br />
             heal, and move forward.
           </p>
 
         </div>
 
-        {/* Navigation */}
+
+        {/* Explore */}
         <div className="footer-column">
 
-          <h3>Explore</h3>
+          <h3>
+            Explore
+          </h3>
 
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#approach">Approach</a>
-          <a href="#faq">FAQs</a>
+          <Link to="/about">
+            About
+          </Link>
+
+          <Link to="/services">
+            Services
+          </Link>
+
+          <Link to="/approach">
+            Approach
+          </Link>
+
+          <Link to="/faq">
+            FAQs
+          </Link>
 
         </div>
+
 
         {/* Contact */}
         <div className="footer-column">
 
-          <h3>Get in Touch</h3>
+          <h3>
+            Get in Touch
+          </h3>
 
           <a href="tel:+919385470080">
             +91 93854 70080
@@ -55,11 +76,12 @@ function Footer() {
 
       </div>
 
+
+      {/* Bottom */}
       <div className="footer-bottom">
 
         <p>
-          © {new Date().getFullYear()} Euphoric Minds.
-          All rights reserved.
+          © 2026 Euphoric Minds. All rights reserved.
         </p>
 
         <p>

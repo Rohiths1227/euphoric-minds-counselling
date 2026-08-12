@@ -1,5 +1,9 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
 
@@ -8,8 +12,6 @@
 
   z-index: 1000;
 
-  padding: 22px 0;
-
   background: var(--ivory);
 
   border-bottom: 1px solid rgba(38, 60, 53, 0.08);
@@ -17,36 +19,37 @@
 
 .navbar-container {
   width: min(1280px, 92%);
-  min-height: 46px;
+  height: 100%;
 
   margin: 0 auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 30px;
 }
 
-/* BRAND */
+
+/* =========================
+   BRAND
+========================= */
 
 .navbar-brand {
   display: flex;
-
   flex-direction: column;
 
   text-decoration: none;
 
   color: var(--forest);
+
+  flex-shrink: 0;
 }
 
 .brand-name {
   font-family: 'Playfair Display', serif;
 
-  font-size: 1.15rem;
-
+  font-size: 1.25rem;
   font-weight: 600;
 
   line-height: 1;
@@ -64,17 +67,18 @@
   color: #7b877f;
 }
 
-/* LINKS */
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
 
 .navbar-links {
   display: flex;
-
   align-items: center;
 
   gap: 32px;
 
   margin-left: auto;
-
   margin-right: 30px;
 }
 
@@ -114,7 +118,10 @@
   width: 100%;
 }
 
-/* BUTTON */
+
+/* =========================
+   BOOKING BUTTON
+========================= */
 
 .navbar-button {
   display: inline-flex;
@@ -149,7 +156,10 @@
   background: #1b3029;
 }
 
-/* TABLET */
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
 
@@ -165,12 +175,15 @@
 
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
   .navbar {
-    padding: 18px 0;
+    height: 80px;
   }
 
   .navbar-links {

@@ -1,4 +1,5 @@
 import './Hero.css'
+import { Link } from 'react-router-dom'
 
 import therapistImage from '../assets/images/therapist-color.jpg'
 
@@ -27,14 +28,20 @@ function Hero() {
 
           <div className="hero-actions">
 
-            <a href="#booking" className="primary-btn">
+            <Link
+              to="/booking"
+              className="primary-btn"
+            >
               Book a Consultation
-            </a>
+            </Link>
 
-            <a href="#about" className="hero-link">
+            <Link
+              to="/about"
+              className="hero-link"
+            >
               Meet Your Counsellor
               <span>→</span>
-            </a>
+            </Link>
 
           </div>
 
@@ -45,14 +52,17 @@ function Hero() {
 
         </div>
 
+
         <div className="hero-image-wrapper">
 
           <div className="hero-image-frame">
+
             <img
               src={therapistImage}
               alt="Counsellor"
               className="hero-image"
             />
+
           </div>
 
           <div className="hero-image-caption">
@@ -63,6 +73,7 @@ function Hero() {
         </div>
 
       </div>
+
 
       <div className="hero-bottom-text">
         <span>Scroll to explore</span>

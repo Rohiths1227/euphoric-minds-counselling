@@ -1,6 +1,11 @@
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
 .hero {
   position: relative;
 
+  width: 100%;
   min-height: 760px;
 
   padding: 115px 0 75px;
@@ -9,6 +14,11 @@
 
   background: var(--ivory);
 }
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
 
 .hero-container {
   width: min(1180px, 90%);
@@ -28,27 +38,49 @@
   gap: 70px;
 }
 
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
 .hero-content {
+  width: 100%;
+
   min-width: 0;
+
   max-width: 620px;
 }
 
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
 .hero-eyebrow {
-  margin-bottom: 22px;
+  margin: 0 0 22px;
 
   font-size: 0.75rem;
+
   font-weight: 600;
 
   letter-spacing: 2.5px;
+
+  line-height: 1.4;
+
   text-transform: uppercase;
 
   color: #718078;
 }
 
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
 .hero h1 {
   margin: 0;
 
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 
   font-size: clamp(3.5rem, 6vw, 6rem);
 
@@ -69,10 +101,17 @@
   color: #708277;
 }
 
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
 .hero-description {
+  width: 100%;
+
   max-width: 540px;
 
-  margin-top: 32px;
+  margin: 32px 0 0;
 
   font-size: 1.08rem;
 
@@ -80,6 +119,11 @@
 
   color: #5f625d;
 }
+
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
 
 .hero-actions {
   display: flex;
@@ -91,6 +135,53 @@
   margin-top: 38px;
 }
 
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.hero .primary-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 999px;
+
+  background: var(--forest);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero .primary-btn:hover {
+  transform: translateY(-3px);
+
+  background: #1b3029;
+
+  box-shadow: 0 10px 25px rgba(38, 60, 53, 0.16);
+}
+
+
+/* =========================================================
+   SECONDARY LINK
+   ========================================================= */
+
 .hero-link {
   display: inline-flex;
 
@@ -98,22 +189,39 @@
 
   gap: 8px;
 
+  color: var(--forest);
+
+  text-decoration: none;
+
   font-size: 0.9rem;
 
   font-weight: 600;
 
-  color: var(--forest);
+  transition: color 0.3s ease;
+}
+
+.hero-link:hover {
+  color: #52675e;
 }
 
 .hero-link span {
+  display: inline-block;
+
   font-size: 1.2rem;
+
+  line-height: 1;
 
   transition: transform 0.3s ease;
 }
 
 .hero-link:hover span {
-  transform: translateX(5px);
+  transform: translateX(6px);
 }
+
+
+/* =========================================================
+   HERO NOTE
+   ========================================================= */
 
 .hero-note {
   display: flex;
@@ -126,29 +234,40 @@
 
   font-size: 0.78rem;
 
+  line-height: 1.5;
+
   color: #788078;
 }
 
 .hero-note span {
+  display: inline-block;
+
   font-size: 0.55rem;
 
   color: var(--sage);
 }
 
-/* =========================
-   IMAGE
-========================= */
+
+/* =========================================================
+   HERO IMAGE WRAPPER
+   ========================================================= */
 
 .hero-image-wrapper {
   position: relative;
 
   width: 100%;
+
   max-width: 500px;
 
   min-width: 0;
 
   justify-self: end;
 }
+
+
+/* =========================================================
+   HERO IMAGE FRAME
+   ========================================================= */
 
 .hero-image-frame {
   position: relative;
@@ -159,21 +278,48 @@
 
   overflow: hidden;
 
-  border-radius: 240px 240px 24px 24px;
+  border-radius:
+    240px
+    240px
+    24px
+    24px;
 
   background: var(--sage);
+
+  will-change: transform;
 }
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .hero-image {
   display: block;
 
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
 
   filter: saturate(0.88);
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
 }
+
+.hero-image-frame:hover .hero-image {
+  transform: scale(1.03);
+
+  filter: saturate(1);
+}
+
+
+/* =========================================================
+   IMAGE CAPTION
+   ========================================================= */
 
 .hero-image-caption {
   display: flex;
@@ -186,29 +332,33 @@
 
   margin-top: 14px;
 
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 
   font-size: 0.95rem;
+
+  line-height: 1.4;
 
   color: var(--forest);
 }
 
 .hero-image-caption span {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 
   font-size: 0.7rem;
 
   color: #7d877f;
 }
 
-/* =========================
-   BOTTOM
-========================= */
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
 
 .hero-bottom-text {
   position: absolute;
 
   bottom: 30px;
+
   left: 50%;
 
   display: flex;
@@ -222,6 +372,8 @@
   font-size: 0.68rem;
 
   letter-spacing: 1.5px;
+
+  line-height: 1;
 
   text-transform: uppercase;
 
@@ -242,12 +394,196 @@
   background: #aeb5af;
 }
 
-/* =========================
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes heroImageFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* =========================================================
+   TEXT ENTRANCE ANIMATIONS
+   ========================================================= */
+
+.hero-eyebrow {
+  animation:
+    heroFadeUp
+    0.8s
+    ease-out
+    both;
+
+  animation-delay: 0.15s;
+}
+
+
+.hero h1 {
+  animation:
+    heroFadeUp
+    0.9s
+    ease-out
+    both;
+
+  animation-delay: 0.3s;
+}
+
+
+.hero-description {
+  animation:
+    heroFadeUp
+    0.9s
+    ease-out
+    both;
+
+  animation-delay: 0.5s;
+}
+
+
+.hero-actions {
+  animation:
+    heroFadeUp
+    0.9s
+    ease-out
+    both;
+
+  animation-delay: 0.7s;
+}
+
+
+.hero-note {
+  animation:
+    heroFadeUp
+    0.9s
+    ease-out
+    both;
+
+  animation-delay: 0.9s;
+}
+
+
+/* =========================================================
+   IMAGE ENTRANCE
+   ========================================================= */
+
+.hero-image-wrapper {
+  animation:
+    heroImageReveal
+    1.1s
+    ease-out
+    both;
+
+  animation-delay: 0.35s;
+}
+
+
+/* =========================================================
+   IMAGE FLOATING ANIMATION
+   ========================================================= */
+
+.hero-image-frame {
+  animation:
+    heroImageFloat
+    5s
+    ease-in-out
+    1.5s
+    infinite;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR ANIMATION
+   ========================================================= */
+
+.hero-bottom-text {
+  animation:
+    heroFadeUp
+    0.8s
+    ease-out
+    both;
+
+  animation-delay: 1.2s;
+}
+
+
+/* =========================================================
+   SCROLL LINE ANIMATION
+   ========================================================= */
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleX(0.4);
+
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+
+    transform-origin: left;
+  }
+
+  100% {
+    transform: scaleX(0.4);
+
+    transform-origin: left;
+  }
+}
+
+.scroll-line {
+  animation:
+    scrollLine
+    2s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
    TABLET
-========================= */
-/* =========================
-   TABLET
-========================= */
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -270,7 +606,11 @@
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(
+      3rem,
+      6vw,
+      4.5rem
+    );
 
     letter-spacing: -1.5px;
   }
@@ -301,13 +641,10 @@
 
 }
 
-/* =========================
-   SMALL TABLET
-========================= */
 
-/* =========================
+/* =========================================================
    SMALL TABLET
-========================= */
+   ========================================================= */
 
 @media (max-width: 800px) {
 
@@ -345,9 +682,10 @@
 
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE
-========================= */
+   ========================================================= */
 
 @media (max-width: 700px) {
 
@@ -395,7 +733,12 @@
   .hero h1 {
     width: 100%;
 
-    font-size: clamp(2.7rem, 12vw, 3.8rem);
+    font-size:
+      clamp(
+        2.7rem,
+        12vw,
+        3.8rem
+      );
 
     line-height: 0.98;
 
@@ -426,6 +769,16 @@
     gap: 18px;
 
     margin-top: 30px;
+  }
+
+  .hero .primary-btn {
+    padding: 13px 21px;
+
+    font-size: 0.82rem;
+  }
+
+  .hero-link {
+    font-size: 0.84rem;
   }
 
   .hero-note {
@@ -466,9 +819,10 @@
 
 }
 
-/* =========================
+
+/* =========================================================
    SMALL MOBILE
-========================= */
+   ========================================================= */
 
 @media (max-width: 430px) {
 
@@ -484,8 +838,19 @@
     gap: 38px;
   }
 
+  .hero-eyebrow {
+    font-size: 0.61rem;
+
+    letter-spacing: 1.8px;
+  }
+
   .hero h1 {
-    font-size: clamp(2.5rem, 11.5vw, 3.3rem);
+    font-size:
+      clamp(
+        2.5rem,
+        11.5vw,
+        3.3rem
+      );
 
     letter-spacing: -0.8px;
   }
@@ -498,6 +863,24 @@
 
   .hero-actions {
     margin-top: 25px;
+
+    gap: 16px;
+  }
+
+  .hero .primary-btn {
+    padding: 12px 19px;
+
+    font-size: 0.8rem;
+  }
+
+  .hero-link {
+    font-size: 0.8rem;
+  }
+
+  .hero-note {
+    margin-top: 26px;
+
+    font-size: 0.68rem;
   }
 
   .hero-image-wrapper {
@@ -514,6 +897,76 @@
       160px
       16px
       16px;
+  }
+
+  .hero-image-caption {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero {
+    padding-top: 95px;
+  }
+
+  .hero-container {
+    width: calc(100% - 24px);
+
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 2.35rem;
+
+    letter-spacing: -0.6px;
+  }
+
+  .hero-description {
+    font-size: 0.86rem;
+  }
+
+  .hero-image-frame {
+    height: 390px;
+
+    border-radius:
+      140px
+      140px
+      15px
+      15px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-eyebrow,
+  .hero h1,
+  .hero-description,
+  .hero-actions,
+  .hero-note,
+  .hero-image-wrapper,
+  .hero-image-frame,
+  .hero-bottom-text,
+  .scroll-line {
+    animation: none;
+  }
+
+  .hero-link span,
+  .hero .primary-btn,
+  .hero-image {
+    transition: none;
   }
 
 }

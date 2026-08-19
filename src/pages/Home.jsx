@@ -14,9 +14,9 @@ function Home() {
 
       <ServicesPreview />
 
-      <FAQPreview />
-
       <BookingProcess />
+
+      <FAQPreview />
 
       <FinalCTA />
     </>

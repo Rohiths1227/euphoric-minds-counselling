@@ -9,15 +9,20 @@ function AboutPreview() {
 
       <div className="about-container">
 
-        {/* Image */}
+        {/* =========================
+            IMAGE
+        ========================= */}
+
         <div className="about-image-area">
 
           <div className="about-image-frame">
+
             <img
               src={therapistBw}
               alt="Harshavarthini Ravikumar"
               className="about-image"
             />
+
           </div>
 
           <div className="about-image-label">
@@ -27,17 +32,23 @@ function AboutPreview() {
 
         </div>
 
-        {/* Content */}
+
+        {/* =========================
+            CONTENT
+        ========================= */}
+
         <div className="about-content">
 
           <p className="about-eyebrow">
             About Euphoric Minds
           </p>
 
+
           <h2>
             Where there is healing,
-            <span> there is hope.</span>
+            <span>there is hope.</span>
           </h2>
+
 
           <p className="about-intro">
             Sometimes the stories we carry begin to play on repeat —
@@ -45,7 +56,8 @@ function AboutPreview() {
             we see ourselves.
           </p>
 
-          <p>
+
+          <p className="about-description">
             Understanding these patterns can be the first step towards
             creating a different way forward. At Euphoric Minds,
             counselling offers a safe and confidential space to explore
@@ -53,11 +65,19 @@ function AboutPreview() {
             and work towards meaningful change.
           </p>
 
+
+          {/* Divider */}
+
           <div className="about-divider"></div>
+
+
+          {/* Profile */}
 
           <div className="about-profile">
 
-            <h3>Harshavarthini Ravikumar</h3>
+            <h3>
+              Harshavarthini Ravikumar
+            </h3>
 
             <p className="about-role">
               Counselling Psychologist
@@ -71,13 +91,22 @@ function AboutPreview() {
 
           </div>
 
+
+          {/* CTA */}
+
           <Link
-  to="/booking#booking-form"
-  className="about-preview-button"
->
-  Take the First Step
-  <span>→</span>
-</Link>
+            to="/booking"
+            className="about-preview-button"
+          >
+            <span className="about-button-text">
+              Take the First Step
+            </span>
+
+            <span className="about-button-arrow">
+              →
+            </span>
+
+          </Link>
 
         </div>
 

@@ -1,52 +1,58 @@
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
 .final-cta {
-  padding: 110px 0;
-  background: var(--forest);
-  color: white;
+  width: 100%;
+  padding: 85px 0;
+
+  background: #294A40;
+  color: #FFFFFF;
+
   text-align: center;
 }
 
 .final-cta-container {
   width: min(900px, 90%);
-
   margin: 0 auto;
 }
 
-/* =========================
+
+/* =========================================================
    EYEBROW
-========================= */
+========================================================= */
 
 .final-cta-eyebrow {
-  margin-bottom: 25px;
+  margin: 0 0 18px;
 
   font-size: 0.72rem;
-
   font-weight: 600;
 
   letter-spacing: 2.5px;
-
   text-transform: uppercase;
 
-  color: #aebbb3;
+  color: #AEBBB3;
 }
 
-/* =========================
+
+/* =========================================================
    HEADING
-========================= */
+========================================================= */
 
 .final-cta h2 {
   margin: 0;
 
   font-family: 'Playfair Display', serif;
 
-  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
 
   font-weight: 500;
 
   line-height: 1.02;
 
-  letter-spacing: -2px;
+  letter-spacing: -1.5px;
 
-  color: white;
+  color: #FFFFFF;
 
   overflow-wrap: break-word;
 }
@@ -54,140 +60,198 @@
 .final-cta h2 span {
   display: block;
 
-  color: #aebbb3;
+  color: #AEBBB3;
 }
 
-/* =========================
+
+/* =========================================================
    DESCRIPTION
-========================= */
+========================================================= */
 
 .final-cta-description {
   width: 100%;
 
-  max-width: 650px;
+  max-width: 620px;
 
-  margin: 35px auto 0;
+  margin: 25px auto 0;
 
   font-size: 1rem;
 
-  line-height: 1.85;
+  line-height: 1.75;
 
-  color: #d0d7d2;
+  color: #D0D7D2;
 }
 
-/* =========================
+
+/* =========================================================
    ACTIONS
-========================= */
+========================================================= */
 
 .final-cta-actions {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 15px;
+  flex-wrap: wrap;
 
-  margin-top: 40px;
+  gap: 12px;
+
+  margin-top: 30px;
 }
 
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
 .final-cta-phone,
+.final-cta-whatsapp,
 .final-cta-email {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 10px;
+  gap: 9px;
 
-  padding: 14px 24px;
+  padding: 13px 21px;
 
   border-radius: 999px;
 
-  font-size: 0.88rem;
-
+  font-size: 0.86rem;
   font-weight: 600;
 
   white-space: nowrap;
 
-  transition: all 0.3s ease;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.final-cta-phone {
-  background: white;
 
-  color: var(--forest);
+/* =========================================================
+   PHONE
+========================================================= */
+
+.final-cta-phone {
+  background: #FFFFFF;
+
+  border: 1px solid #FFFFFF;
+
+  color: #183A32;
 }
 
 .final-cta-phone:hover {
   transform: translateY(-3px);
+
+  background: #F1F4F1;
 }
 
-.final-cta-email {
-  border: 1px solid #8d9c93;
 
-  color: white;
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.final-cta-whatsapp {
+  background: #FFFFFF;
+
+  border: 1px solid #FFFFFF;
+
+  color: #183A32;
+}
+
+.final-cta-whatsapp span {
+  transition: transform 0.25s ease;
+}
+
+.final-cta-whatsapp:hover {
+  transform: translateY(-3px);
+
+  background: #F1F4F1;
+}
+
+.final-cta-whatsapp:hover span {
+  transform: translate(4px, -2px);
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.final-cta-email {
+  background: transparent;
+
+  border: 1px solid #8D9C93;
+
+  color: #FFFFFF;
 }
 
 .final-cta-email span {
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .final-cta-email:hover {
-  background: white;
+  transform: translateY(-3px);
 
-  border-color: white;
+  background: #FFFFFF;
 
-  color: var(--forest);
+  border-color: #FFFFFF;
+
+  color: #183A32;
 }
 
 .final-cta-email:hover span {
-  transform: translateX(5px);
+  transform: translateX(4px);
 }
 
-/* =========================
+
+/* =========================================================
    NOTE
-========================= */
+========================================================= */
 
 .final-cta-note {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 9px;
+  gap: 8px;
 
-  margin-top: 55px;
+  margin-top: 35px;
 
-  font-size: 0.75rem;
+  font-size: 0.72rem;
 
   letter-spacing: 0.5px;
 
-  color: #aebbb3;
+  color: #AEBBB3;
 }
 
 .final-cta-note span {
   width: 6px;
-
   height: 6px;
 
   flex-shrink: 0;
 
   border-radius: 50%;
 
-  background: #aebbb3;
+  background: #AEBBB3;
 }
 
-/* =========================
+
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 1100px) {
 
   .final-cta {
-    padding: 110px 0;
+    padding: 75px 0;
   }
 
   .final-cta-container {
@@ -195,9 +259,9 @@
   }
 
   .final-cta h2 {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
 
-    letter-spacing: -1.5px;
+    letter-spacing: -1.2px;
   }
 
   .final-cta-description {
@@ -206,15 +270,12 @@
     font-size: 0.95rem;
   }
 
-  .final-cta-actions {
-    margin-top: 35px;
-  }
-
 }
 
-/* =========================
+
+/* =========================================================
    SMALL TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 800px) {
 
@@ -223,23 +284,20 @@
   }
 
   .final-cta h2 {
-    font-size: clamp(2.8rem, 8vw, 4.5rem);
-  }
-
-  .final-cta-description {
-    max-width: 580px;
+    font-size: clamp(2.7rem, 8vw, 4.3rem);
   }
 
 }
 
-/* =========================
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 700px) {
 
   .final-cta {
-    padding: 75px 0;
+    padding: 65px 0;
   }
 
   .final-cta-container {
@@ -247,27 +305,27 @@
   }
 
   .final-cta-eyebrow {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
-    font-size: 0.65rem;
+    font-size: 0.64rem;
 
     letter-spacing: 2px;
   }
 
   .final-cta h2 {
-    font-size: clamp(2.7rem, 11vw, 3.6rem);
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
 
-    line-height: 1.05;
+    line-height: 1.04;
 
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
   }
 
   .final-cta-description {
-    margin-top: 28px;
+    margin-top: 22px;
 
     font-size: 0.9rem;
 
-    line-height: 1.75;
+    line-height: 1.7;
   }
 
   .final-cta-actions {
@@ -275,75 +333,38 @@
 
     width: 100%;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 32px;
+    margin-top: 28px;
   }
 
   .final-cta-phone,
+  .final-cta-whatsapp,
   .final-cta-email {
     width: 100%;
 
-    padding: 14px 20px;
+    padding: 13px 18px;
+
+    font-size: 0.82rem;
   }
 
   .final-cta-note {
-    margin-top: 40px;
+    margin-top: 30px;
 
-    font-size: 0.68rem;
+    font-size: 0.67rem;
   }
 
 }
 
-.final-cta-whatsapp {
-  display: inline-flex;
 
-  align-items: center;
-  justify-content: center;
-
-  gap: 10px;
-
-  padding: 14px 24px;
-
-  border: 1px solid #8d9c93;
-
-  border-radius: 999px;
-
-  color: white;
-
-  font-size: 0.88rem;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-
-  transition: all 0.3s ease;
-}
-
-.final-cta-whatsapp span {
-  transition: transform 0.3s ease;
-}
-
-.final-cta-whatsapp:hover {
-  background: white;
-
-  border-color: white;
-
-  color: var(--forest);
-}
-
-.final-cta-whatsapp:hover span {
-  transform: translateX(4px);
-}
-
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 430px) {
 
   .final-cta {
-    padding: 60px 0;
+    padding: 55px 0;
   }
 
   .final-cta-container {
@@ -351,26 +372,21 @@
   }
 
   .final-cta h2 {
-    font-size: clamp(2.4rem, 11vw, 3.1rem);
+    font-size: clamp(2.3rem, 11vw, 3rem);
 
-    letter-spacing: -0.7px;
+    letter-spacing: -0.6px;
   }
 
   .final-cta-description {
-    font-size: 0.86rem;
+    font-size: 0.85rem;
 
     line-height: 1.7;
   }
 
-  .final-cta-phone,
-  .final-cta-email {
-    font-size: 0.82rem;
-  }
-
   .final-cta-note {
-    margin-top: 35px;
+    margin-top: 28px;
 
-    font-size: 0.64rem;
+    font-size: 0.62rem;
   }
 
 }

@@ -1,110 +1,690 @@
+/* =========================================================
+   APPROACH PAGE
+========================================================= */
+
 .approach-page {
-  padding: 140px 0;
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 145px 0 110px;
+
   background: var(--ivory);
+
+  color: var(--forest);
+
+  overflow: hidden;
 }
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .approach-page .container {
   width: min(1180px, 90%);
+
   margin: 0 auto;
 }
 
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
 .approach-eyebrow {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
   font-size: 0.72rem;
+
   font-weight: 600;
+
   letter-spacing: 2.5px;
+
+  line-height: 1.4;
+
   text-transform: uppercase;
 
-  color: #7c887f;
+  color: #71847b;
+
+  opacity: 0;
+
+  animation:
+    approachFadeUp
+    0.8s
+    ease-out
+    0.15s
+    forwards;
 }
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
 
 .approach-page h1 {
   max-width: 850px;
+
   margin: 0;
 
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-family:
+    'Playfair Display',
+    serif;
+
+  font-size:
+    clamp(
+      3.2rem,
+      6vw,
+      5.8rem
+    );
+
   font-weight: 500;
-  line-height: 1.02;
+
+  line-height: 1;
+
   letter-spacing: -2px;
 
   color: var(--forest);
+
+  overflow-wrap: break-word;
+
+  opacity: 0;
+
+  animation:
+    approachFadeUp
+    0.9s
+    ease-out
+    0.3s
+    forwards;
 }
 
 .approach-page h1 span {
   display: block;
-  color: #7b8a81;
+
+  color: #71847b;
 }
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .approach-description {
   max-width: 650px;
-  margin-top: 35px;
 
-  font-size: 1rem;
+  margin: 32px 0 0;
+
+  font-size: 1.05rem;
+
   line-height: 1.85;
 
-  color: #6a706b;
+  color: #606963;
+
+  opacity: 0;
+
+  animation:
+    approachFadeUp
+    0.85s
+    ease-out
+    0.5s
+    forwards;
 }
+
+
+/* =========================================================
+   APPROACH POINTS
+========================================================= */
 
 .approach-points {
-  margin-top: 80px;
-  border-top: 1px solid #d7d4cc;
-}
-
-.approach-points > div {
   display: grid;
-  grid-template-columns: 80px 1fr 1fr;
-  gap: 30px;
 
-  padding: 35px 0;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 0;
+
+  margin-top: 80px;
+
+  border-top: 1px solid #d7d4cc;
 
   border-bottom: 1px solid #d7d4cc;
 }
 
-.approach-points span {
-  font-size: 0.72rem;
-  color: #89918a;
+
+/* =========================================================
+   INDIVIDUAL POINT
+========================================================= */
+
+.approach-points > div {
+  position: relative;
+
+  min-height: 300px;
+
+  padding:
+    35px
+    35px
+    40px;
+
+  border-right: 1px solid #d7d4cc;
+
+  opacity: 0;
+
+  transform:
+    translateY(35px);
+
+  animation:
+    approachPointReveal
+    0.8s
+    ease-out
+    forwards;
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
 }
+
+.approach-points > div:last-child {
+  border-right: none;
+}
+
+
+/* =========================================================
+   STAGGERED ANIMATION
+========================================================= */
+
+.approach-points > div:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.approach-points > div:nth-child(2) {
+  animation-delay: 0.85s;
+}
+
+.approach-points > div:nth-child(3) {
+  animation-delay: 1s;
+}
+
+
+/* =========================================================
+   POINT HOVER
+========================================================= */
+
+.approach-points > div:hover {
+  background:
+    rgba(168, 183, 162, 0.12);
+
+  transform:
+    translateY(-4px);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.approach-points > div > span {
+  display: block;
+
+  margin-bottom: 35px;
+
+  font-family:
+    'DM Sans',
+    sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: #8b918b;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.approach-points > div:hover > span {
+  color: var(--forest);
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   POINT HEADING
+========================================================= */
 
 .approach-points h2 {
   margin: 0;
 
-  font-family: 'Playfair Display', serif;
+  font-family:
+    'Playfair Display',
+    serif;
+
   font-size: 1.7rem;
+
   font-weight: 500;
 
+  line-height: 1.25;
+
   color: var(--forest);
+
+  transition:
+    transform 0.3s ease;
 }
+
+.approach-points > div:hover h2 {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   POINT DESCRIPTION
+========================================================= */
 
 .approach-points p {
-  margin: 0;
+  max-width: 300px;
+
+  margin: 18px 0 0;
 
   font-size: 0.9rem;
+
   line-height: 1.8;
 
-  color: #6a706b;
+  color: #69716c;
+
+  transition:
+    color 0.3s ease;
 }
 
-@media (max-width: 700px) {
+.approach-points > div:hover p {
+  color: #555f59;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes approachFadeUp {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes approachPointReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
   .approach-page {
-    padding: 90px 0;
+    padding:
+      125px
+      0
+      90px;
+  }
+
+  .approach-page .container {
+    width:
+      min(92%, 900px);
   }
 
   .approach-page h1 {
-    font-size: 3.2rem;
+    font-size:
+      clamp(
+        3rem,
+        6vw,
+        5rem
+      );
+
+    letter-spacing: -1.5px;
+  }
+
+  .approach-description {
+    max-width: 600px;
+
+    font-size: 1rem;
   }
 
   .approach-points {
-    margin-top: 55px;
+    margin-top: 65px;
   }
 
   .approach-points > div {
-    grid-template-columns: 40px 1fr;
-    gap: 15px;
+    min-height: 290px;
+
+    padding:
+      30px
+      25px
+      35px;
+  }
+
+  .approach-points h2 {
+    font-size: 1.45rem;
   }
 
   .approach-points p {
-    grid-column: 2;
+    font-size: 0.85rem;
   }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .approach-page {
+    padding:
+      115px
+      0
+      75px;
+  }
+
+  .approach-page .container {
+    width:
+      min(90%, 650px);
+  }
+
+  .approach-page h1 {
+    font-size:
+      clamp(
+        2.8rem,
+        8vw,
+        4.3rem
+      );
+
+    line-height: 1.02;
+  }
+
+  .approach-description {
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+  .approach-points {
+    grid-template-columns: 1fr;
+
+    margin-top: 50px;
+  }
+
+  .approach-points > div {
+    min-height: auto;
+
+    padding:
+      28px
+      0
+      32px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #d7d4cc;
+  }
+
+  .approach-points > div:last-child {
+    border-bottom: none;
+  }
+
+  .approach-points > div:hover {
+    transform: none;
+
+    padding-left: 8px;
+
+    padding-right: 8px;
+  }
+
+  .approach-points > div > span {
+    margin-bottom: 20px;
+  }
+
+  .approach-points h2 {
+    font-size: 1.45rem;
+  }
+
+  .approach-points p {
+    max-width: 600px;
+
+    font-size: 0.86rem;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .approach-page {
+    min-height: auto;
+
+    padding:
+      105px
+      0
+      65px;
+  }
+
+  .approach-page .container {
+    width:
+      calc(100% - 32px);
+  }
+
+  .approach-eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 0.64rem;
+
+    letter-spacing: 2px;
+  }
+
+  .approach-page h1 {
+    font-size:
+      clamp(
+        2.7rem,
+        11vw,
+        3.7rem
+      );
+
+    line-height: 1.02;
+
+    letter-spacing: -1px;
+  }
+
+  .approach-description {
+    margin-top: 23px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.75;
+  }
+
+  .approach-points {
+    margin-top: 40px;
+  }
+
+  .approach-points > div {
+    padding:
+      24px
+      0
+      28px;
+  }
+
+  .approach-points > div > span {
+    margin-bottom: 17px;
+
+    font-size: 0.65rem;
+  }
+
+  .approach-points h2 {
+    font-size: 1.3rem;
+  }
+
+  .approach-points p {
+    margin-top: 12px;
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .approach-page {
+    padding:
+      95px
+      0
+      55px;
+  }
+
+  .approach-page .container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .approach-eyebrow {
+    font-size: 0.6rem;
+
+    letter-spacing: 1.8px;
+  }
+
+  .approach-page h1 {
+    font-size:
+      clamp(
+        2.35rem,
+        11vw,
+        3.1rem
+      );
+
+    letter-spacing: -0.7px;
+  }
+
+  .approach-description {
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+  }
+
+  .approach-points {
+    margin-top: 35px;
+  }
+
+  .approach-points > div {
+    padding:
+      22px
+      0
+      25px;
+  }
+
+  .approach-points h2 {
+    font-size: 1.2rem;
+  }
+
+  .approach-points p {
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .approach-page {
+    padding-top: 90px;
+  }
+
+  .approach-page .container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .approach-page h1 {
+    font-size: 2.25rem;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .approach-eyebrow,
+  .approach-page h1,
+  .approach-description,
+  .approach-points > div {
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+  }
+
+  .approach-points > div,
+  .approach-points > div > span,
+  .approach-points h2,
+  .approach-points p {
+    transition: none;
+  }
+
 }

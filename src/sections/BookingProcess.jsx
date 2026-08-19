@@ -1,4 +1,5 @@
 import './BookingProcess.css'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
@@ -47,10 +48,14 @@ function BookingProcess() {
 
         </div>
 
+
         <div className="booking-steps">
 
           {steps.map((step) => (
-            <div className="booking-step" key={step.number}>
+            <div
+              className="booking-step"
+              key={step.number}
+            >
 
               <div className="booking-step-number">
                 {step.number}
@@ -58,9 +63,13 @@ function BookingProcess() {
 
               <div className="booking-step-content">
 
-                <h3>{step.title}</h3>
+                <h3>
+                  {step.title}
+                </h3>
 
-                <p>{step.description}</p>
+                <p>
+                  {step.description}
+                </p>
 
               </div>
 
@@ -69,9 +78,11 @@ function BookingProcess() {
 
         </div>
 
+
         <div className="booking-process-bottom">
 
           <div>
+
             <p className="booking-process-quote">
               No pressure. No judgement.
             </p>
@@ -79,12 +90,19 @@ function BookingProcess() {
             <p className="booking-process-small">
               Just a conversation to begin.
             </p>
+
           </div>
 
-          <a href="#booking-form" className="booking-process-button">
-  Start Your Consultation
-  <span>→</span>
-</a>
+
+          {/* Consultation Button */}
+
+          <Link
+            to="/booking"
+            className="booking-process-button"
+          >
+            Start Your Consultation
+            <span>→</span>
+          </Link>
 
         </div>
 
